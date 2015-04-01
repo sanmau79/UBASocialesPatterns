@@ -1,0 +1,157 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-2187yk');
+	src:url('fonts/icomoon.eot?#iefix-2187yk') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-2187yk') format('woff'),
+		url('fonts/icomoon.ttf?-2187yk') format('truetype'),
+		url('fonts/icomoon.svg?-2187yk#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icon {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-microphone:before {
+	content: "\e600";
+}
+
+.icon-checkmark:before {
+	content: "\e601";
+}
+
+.icon-cancel:before {
+	content: "\e602";
+}
+
+.icon-plus:before {
+	content: "\e603";
+}
+
+.icon-minus:before {
+	content: "\e604";
+}
+
+.icon-notice:before {
+	content: "\e605";
+}
+
+.icon-picture:before {
+	content: "\e606";
+}
+
+.icon-mouse:before {
+	content: "\e607";
+}
+
+.icon-envelope:before {
+	content: "\e608";
+}
+
+.icon-description:before {
+	content: "\e609";
+}
+
+.icon-favorite:before {
+	content: "\e60a";
+}
+
+.icon-favorite-outline:before {
+	content: "\e60b";
+}
+
+.icon-lock-open:before {
+	content: "\e60c";
+}
+
+.icon-lock-outline:before {
+	content: "\e60d";
+}
+
+.icon-query-builder:before {
+	content: "\e60e";
+}
+
+.icon-room:before {
+	content: "\e60f";
+}
+
+.icon-search:before {
+	content: "\e610";
+}
+
+.icon-pause-circle-outline:before {
+	content: "\e611";
+}
+
+.icon-play-circle-outline:before {
+	content: "\e612";
+}
+
+.icon-videocam:before {
+	content: "\e613";
+}
+
+.icon-call:before {
+	content: "\e614";
+}
+
+.icon-keyboard-arrow-down:before {
+	content: "\e615";
+}
+
+.icon-keyboard-arrow-left:before {
+	content: "\e616";
+}
+
+.icon-keyboard-arrow-right:before {
+	content: "\e617";
+}
+
+.icon-keyboard-arrow-up:before {
+	content: "\e618";
+}
+
+.icon-keyboard-control:before {
+	content: "\e619";
+}
+
+.icon-arrow-back:before {
+	content: "\e61a";
+}
+
+.icon-arrow-drop-down:before {
+	content: "\e61b";
+}
+
+.icon-arrow-drop-up:before {
+	content: "\e61c";
+}
+
+.icon-arrow-forward:before {
+	content: "\e61d";
+}
+
+.icon-check:before {
+	content: "\e61e";
+}
+
+.icon-close:before {
+	content: "\e61f";
+}
+
+.icon-event-available:before {
+	content: "\e620";
+}
+

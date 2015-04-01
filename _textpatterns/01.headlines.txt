@@ -1,0 +1,1 @@
+Pensado para textos default en una entrada de blog. Los textos diseñados particularmente para la HOME, por ejemplo, deben ser respetados tal cual se pensaron.

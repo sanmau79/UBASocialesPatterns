@@ -1,0 +1,4 @@
+Two table classes: 
+"table" 
+and 
+"table table-striped"

@@ -1,0 +1,253 @@
+// APP LESS VARIABLES & MIXINS:
+
+// Variables:
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@font-family:  		'Montserrat', sans-serif;
+@app-color:			rgb(66,75,92);
+@app-index-bg:		'http://whywetravel.de/wp-content/uploads/2011/09/GOPR0849.jpg'; // big background used as cover
+@app-index-bg2:		rgba(66,75,92,0.8);
+
+// Mixins
+.index-background{
+	font-family: @font-family;
+	text-align: center;
+	background: @app-index-bg2 url(@app-index-bg) top left/cover no-repeat;
+	color: #ededed;
+
+	[data-pattern="app-wrapper"]{
+    	background: @app-index-bg2;
+
+    	dl{margin:0; padding-bottom:2em; }
+		dd{ margin:0;}
+    	a{
+    		color: white;
+
+    		&.ghost-btn {
+				margin: 2em 0 0.5em;
+				display: inline-block;
+				text-decoration: none;
+				border: 1px solid @app-color;
+				height: 36px;
+				line-height: 36px;
+				color: @app-color;
+				font-size: 1em;
+				padding: .5em 1.5em;
+				transition: all 0.2s ease-out;
+				background: none;
+				box-sizing: content-box;
+				cursor: pointer;
+				zoom: 1;
+				position: relative;
+
+				&:hover {
+					transition: 0.2s ease;
+					background-color: @app-color;
+					color: white;
+				}
+				&:focus {
+					outline: none;
+				}
+			}
+    	}
+    }		
+}
+
+
+// Normalize CSS:
+@import 			'http://necolas.github.io/normalize.css/latest/normalize.css';
+
+
+// GRID:
+html{
+	height: 100%;
+	margin: 0;
+}
+body[data-pattern="app-body"]{
+	width:100%; height:100%; 
+	margin: 0;
+
+	[data-pattern="app-wrapper"]{
+		width:100%; height:100%; 
+		margin: 0;
+
+		header[data-pattern="app-header"],
+	    main[data-pattern="app-main"],
+	    footer[data-pattern="app-footer"]{
+	    	display: block;
+			min-width: 100%;
+			min-height: auto;
+
+			[data-pattern="app-inner-wrapper"]{ 
+				margin: 0 auto; 
+			}
+	    }
+
+		header[data-pattern="app-header"]{ 
+			box-shadow: 0px 1px 10px rgba(66, 75, 92, 0.1);
+			vertical-align: baseline;
+
+			nav{
+				display: block;
+				margin: 1em 0 0;
+
+				img{ margin:0px 5px 3px; }
+			}
+		}
+		main[data-pattern="app-main"]{ 
+			background: #fff;
+		}    
+    }
+
+    // Specific INDEX styles:
+    &[data-appstyles="app-index-style"]{
+    	.index-background();
+
+    	header[data-pattern="app-header"]{
+    		padding: 5% 0 0;
+    	}
+    	main[data-pattern="app-main"]{
+    		padding: 3% 0 0;
+    		color: @app-color;
+    	}
+    }
+
+    // Specific PATTERN PAGES styles:
+    &[data-appstyles="app-page-style"]{
+    	header[data-pattern="app-header"]{
+    		background: rgba(255,255,255,0.9);
+    		position: fixed; top: 0; left: 0; right: 0;
+    		font-family: @font-family;
+    		box-shadow: 0px 1px 10px rgba(66, 75, 92, 0.1);
+    		z-index:9999;
+    	}
+    	main[data-pattern="app-main"]{
+    		padding: 140px 0 0;
+
+    		section.pattern{
+    			margin: 4em auto 1em;
+
+				// Icons:
+				ul[data-pattern="icons-example-only"]{
+					margin:0;padding: 0;
+
+					li{
+						list-style: none;
+						padding:10px 15px;
+						font-size: 36px;
+						background: #ededed;
+						display: inline-block;
+						text-align: center;
+					  	vertical-align: middle;
+						margin:0 5px 5px 0;
+					}
+				}
+				// Buttons:
+				p[data-pattern="button-example-only"]{
+					padding: 30px;
+					background: @app-index-bg2;
+				}
+
+				// Details Sections
+	    		details[class*="pattern"]{
+					display: block;
+					background: rgba(66,75,92,0.1);
+					font-family: @font-family;
+					color: @app-color;
+					padding: 1em 1em 0;
+					margin-top: 40px;
+					position: relative;
+
+					summary{
+						font-size: 10px; text-align: center; line-height: 30px;
+						display: block; width: 30px; height: 30px;
+						position: absolute; top: -30px; right: 0;
+						background: rgba(66,75,92,0.1);
+					}
+					textarea{
+						display: inline-block;
+						margin: 0 1em 1em 0;
+						vertical-align: top;
+						font-family: Consolas,Monaco,'Lucida Console',Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,'Courier New';
+						font-size: 12px
+					}
+					
+					p.caption{
+						display: inline-block;
+						vertical-align: top;
+						font-size: 80%;
+						color: rgba(66,75,92,0.7);
+
+						strong{ color: @app-color; }
+					}
+				}
+			}
+    	}
+
+    	// Particular PAGES Styles:
+    	&[data-specific-appstyle="app-grid-pattern"]{
+			[class*="col-"] {
+				padding-top: 15px;
+				padding-bottom: 15px;
+				background-color: #eee;
+				background-color: rgba(86,61,124,.15);
+				border: 1px solid #ddd;
+				border: 1px solid rgba(86,61,124,.2);
+			}
+    	}
+    }
+}
+
+
+
+
+
+// RESPONSIVE:
+
+@media (min-width: 0px) {
+  	[data-pattern="app-inner-wrapper"]{
+  		width: 98%;
+  	}
+
+  	// Details Sections
+	details[class*="pattern"]{
+		textarea{
+			width: 100%;
+		}
+		p.caption{
+			width: 100%;
+		}
+	}	
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: 1200px) {
+	[data-pattern="app-inner-wrapper"]{
+		width: 80%;
+	}
+
+	// Details Sections
+	details[class*="pattern"]{
+		textarea{
+			width: 63%;
+		}
+		p.caption{
+			width: 35%;
+		}
+	}	
+
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: 1600px) {
+  [data-pattern="app-inner-wrapper"]{
+  	width: 60%;
+  }
+}

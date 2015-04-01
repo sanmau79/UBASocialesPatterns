@@ -1,0 +1,127 @@
+//
+// Estílos específicos para UBA Sociales
+// --------------------------------------------------
+
+//
+// Panels
+// --------------------------------------------------
+
+// Planeta Sociales (ps)
+@alto-ps: 		102px; //alto del componente
+
+.panel-planetasociales {
+	position: relative;
+	height: @alto-ps;
+	border: none;
+	.box-shadow(none);
+	
+	.panel-body a,
+	.panel-bgimage{
+		position: relative;
+		display: block;
+		line-height: @alto-ps;
+		padding: 0;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.panel-body{
+		padding: 0;
+
+		a{
+			z-index: 2;
+			line-height: 102px;
+			color: white;
+			font-size: @font-size-h3;
+			font-weight: 900;
+			text-decoration: none;
+		}
+	} 
+	.panel-bgimage{
+		z-index: 1; 
+		height: @alto-ps;
+		overflow: hidden;
+		margin-top: -@alto-ps;
+		background: @gray-base;
+
+		img{	
+			width: 100%;
+			transform: scale(1, 1);
+			opacity: 1;
+			transition: transform 0.3s, opacity 0.3s;
+    		transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+		}
+	}
+
+	&:hover{
+		.panel-bgimage{
+			img{
+				transform: scale(1.1, 1.1);
+				opacity: .6;
+			}
+			
+		}
+	}
+}
+
+// Planeta Sociales (ps)
+@biblio-alto: 		100px; //alto del componente
+@biblio-bg:			#ffb400;
+
+.panel-biblioteca {
+	position: relative;
+	font-weight: 900;
+	text-align: center;
+	background: @biblio-bg;
+	color: white;
+	border: none;
+	.box-shadow(none);
+	
+	.panel-heading{
+		font-size: @font-size-h5;
+	}
+
+	.panel-body{
+		overflow: hidden;
+		height: @biblio-alto;
+		padding: 0 0 @biblio-alto;
+
+		a.biblio-links{
+			position: relative;
+			display: block;
+			overflow: hidden;
+			float: left;
+			width: 50%; height: @biblio-alto;
+			color: white;
+			text-decoration: none;
+
+			
+			h3, span{
+				position:relative; z-index: 2;
+				display: block;
+			}
+			h3{
+				font-weight: 900;
+			}
+			span{
+				font-size: 20px;
+			}
+			img{
+				position: absolute; top: 0; left: 0; z-index: 1;
+				width: 100%;
+				transform: scale(1, 1);
+				opacity: .7;
+				transition: transform 0.3s, opacity 0.3s;
+	    		transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+			}
+
+			&:hover{
+				img{
+					transform: scale(1.1, 1.1);
+					opacity: .2;
+					
+				}
+			}
+		}
+	}
+}
+

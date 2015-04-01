@@ -1,0 +1,1 @@
+Add class="img-responsive" to images is fundamental!

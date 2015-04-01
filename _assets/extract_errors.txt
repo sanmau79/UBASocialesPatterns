@@ -1,0 +1,2 @@
+[Mon Mar 30 2015 20:03:01 GMT-0300 (Argentina Standard Time)] Layer "+54 (11) 4508-3800": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Mon Mar 30 2015 20:03:01 GMT-0300 (Argentina Standard Time)] Layer "sociales@uba.edu.ar": Unsupported extension: ar

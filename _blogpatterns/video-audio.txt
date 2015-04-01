@@ -1,0 +1,2 @@
+Structure for youtube/vimeo videos: 
+embed-responsive + (embed-responsive-16by9,embed-responsive-4by3) > embed-responsive-item. 
